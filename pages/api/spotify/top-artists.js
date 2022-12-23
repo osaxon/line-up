@@ -4,14 +4,6 @@ import { determineTextSize } from "../../../lib/spotify";
 
 const TYPE = "artists";
 
-function lineUp(data) {
-	let dayOne,
-		dayTwo,
-		dayThree = [];
-
-	for (i = 0; i < data.length; i++) {}
-}
-
 const handler = async (req, res) => {
 	console.log(req.query);
 	const { limit, time_range } = req.query;

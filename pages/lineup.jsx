@@ -23,9 +23,6 @@ const Lineup = () => {
 	const [timeRange, setTimeRange] = useState("long_term");
 	const [style, setStyle] = useState("rock");
 	const { data: session } = useSession();
-	useEffect(() => {
-		console.log(session);
-	}, [limit]);
 
 	const { isLoading, isError, data, error } = useQuery("top_artists", () =>
 		getTopArtists({
