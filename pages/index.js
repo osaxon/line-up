@@ -22,7 +22,7 @@ export default function Home() {
 					className="btn btn-primary"
 					onClick={() =>
 						signIn("spotify", {
-							callbackUrl: "http://localhost:3000/lineup",
+							callbackUrl: "/lineup",
 						})
 					}
 				>
