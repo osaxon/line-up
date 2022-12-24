@@ -1,15 +1,19 @@
 import { useSession, signIn, signOut } from "next-auth/react";
-
 export default function Home() {
 	const { data: session } = useSession();
 	if (session) {
 		return (
-			<>
-				Signed in as {session?.token?.email} <br />
-				<button className="btn btn-primary" onClick={() => signOut()}>
-					Sign Out
-				</button>
-			</>
+			<main className="max-w-11/12 mx-auto p-4 h-screen">
+				<section className="flex h-full flex-col items-center justify-center gap-10">
+					Signed in as {session?.token?.email} <br />
+					<button
+						className="btn btn-primary"
+						onClick={() => signOut()}
+					>
+						Sign Out
+					</button>
+				</section>
+			</main>
 		);
 	}
 	return (
